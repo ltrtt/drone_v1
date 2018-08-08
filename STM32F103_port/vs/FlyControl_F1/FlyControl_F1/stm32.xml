@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<EmbeddedProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+  <ToolchainVersion>
+    <GCC>7.2.0</GCC>
+    <GDB>8.0.1</GDB>
+    <Revision>3</Revision>
+  </ToolchainVersion>
+  <BspID>com.sysprogs.arm.stm32</BspID>
+  <BspVersion>4.6R3</BspVersion>
+  <McuID>STM32F103RCTx</McuID>
+  <MCUDefinitionFile>STM32F1xxxx/DeviceDefinitions/stm32f103xe.xml</MCUDefinitionFile>
+  <MCUProperties>
+    <Entries>
+      <KeyValue>
+        <Key>com.sysprogs.bspoptions.primary_memory</Key>
+        <Value>flash</Value>
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.mcuoptions.ignore_startup_file</Key>
+        <Value />
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.toolchainoptions.arm.libctype</Key>
+        <Value>--specs=nano.specs</Value>
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.toolchainoptions.arm.libnosys</Key>
+        <Value>--specs=nosys.specs</Value>
+      </KeyValue>
+    </Entries>
+  </MCUProperties>
+  <BSPSourceFolderName>Device-specific files</BSPSourceFolderName>
+  <MCUMakFile>stm32.mak</MCUMakFile>
+  <ReferencedFrameworks />
+  <FrameworkProperties>
+    <Entries />
+  </FrameworkProperties>
+  <TestFrameworkProperties>
+    <Entries />
+  </TestFrameworkProperties>
+  <ImportedProject>
+    <ImporterID>com.sysprogs.project_importers.keil</ImporterID>
+    <RelativeProjectPath>..\..\..\Template.uvprojx</RelativeProjectPath>
+    <AllDependencies>
+      <ProjectDependency>
+        <RelativePath>..\..\..\Template.uvprojx</RelativePath>
+        <Timestamp>131687920560904834</Timestamp>
+      </ProjectDependency>
+    </AllDependencies>
+    <RootDirectory>
+      <Subdirectories>
+        <VirtualDirectorySnapshot>
+          <Name>USER</Name>
+          <Files>
+            <VirtualFileSnapshot>
+              <RelativePath>..\..\..\USER\main.c</RelativePath>
+            </VirtualFileSnapshot>
+            <VirtualFileSnapshot>
+              <RelativePath>..\..\..\USER\stm32f10x_it.c</RelativePath>
+            </VirtualFileSnapshot>
+            <VirtualFileSnapshot>
+              <RelativePath>..\..\..\USER\sys_function.c</RelativePath>
+            </VirtualFileSnapshot>
+          </Files>
+        </VirtualDirectorySnapshot>
+        <VirtualDirectorySnapshot>
+          <Name>CORE</Name>
+          <Files>
+            <VirtualFileSnapshot>
+              <RelativePath>..\..\..\CORE\core_cm3.c</RelativePath>
+            </VirtualFileSnapshot>
+            <VirtualFileSnapshot>
+              <RelativePath>..\..\..\CORE\system_stm32f10x.c</RelativePath>
+            </VirtualFileSnapshot>
+          </Files>
+        </VirtualDirectorySnapshot>
+        <VirtualDirectorySnapshot>
+          <Name>FWLIB</Name>
+          <Files>
+            <VirtualFileSnapshot>
+              <RelativePath>..\..\..\FWLIB\src\misc.c</RelativePath>
+            </VirtualFileSnapshot>
+            <VirtualFileSnapshot>
+              <RelativePath>..\..\..\FWLIB\src\stm32f10x_gpio.c</RelativePath>
+            </VirtualFileSnapshot>
+            <VirtualFileSnapshot>
+              <RelativePath>..\..\..\FWLIB\src\stm32f10x_rcc.c</RelativePath>
+            </VirtualFileSnapshot>
+            <VirtualFileSnapshot>
+              <RelativePath>..\..\..\FWLIB\src\stm32f10x_usart.c</RelativePath>
+            </VirtualFileSnapshot>
+            <VirtualFileSnapshot>
+              <RelativePath>..\..\..\FWLIB\src\stm32f10x_pwr.c</RelativePath>
+            </VirtualFileSnapshot>
+          </Files>
+        </VirtualDirectorySnapshot>
+        <VirtualDirectorySnapshot>
+          <Name>HW</Name>
+          <Files>
+            <VirtualFileSnapshot>
+              <RelativePath>..\..\..\HW\Usart.c</RelativePath>
+            </VirtualFileSnapshot>
+          </Files>
+        </VirtualDirectorySnapshot>
+      </Subdirectories>
+      <Files />
+    </RootDirectory>
+    <Configurations>
+      <ImportedConfiguration>
+        <Settings>
+          <IncludeDirectories>
+            <string>D:\Personal Ducumen\四轴\Program\STM32F103_port\CORE</string>
+            <string>D:\Personal Ducumen\四轴\Program\STM32F103_port\FWLIB\inc</string>
+            <string>D:\Personal Ducumen\四轴\Program\STM32F103_port\HARDWARE</string>
+            <string>D:\Personal Ducumen\四轴\Program\STM32F103_port\USER</string>
+            <string>D:\Personal Ducumen\四轴\Program\STM32F103_port\HW</string>
+          </IncludeDirectories>
+          <PreprocessorMacros>
+            <string>$$com.sysprogs.bspoptions.primary_memory$$_layout</string>
+            <string>STM32F10X_HD</string>
+            <string>USE_STDPERIPH_DRIVER</string>
+          </PreprocessorMacros>
+          <GeneratePreprocessorOutput>false</GeneratePreprocessorOutput>
+          <IsDebugConfiguration>false</IsDebugConfiguration>
+        </Settings>
+      </ImportedConfiguration>
+    </Configurations>
+  </ImportedProject>
+</EmbeddedProfile>

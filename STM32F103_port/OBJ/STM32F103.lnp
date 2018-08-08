@@ -1,0 +1,20 @@
+--cpu Cortex-M3
+".\obj\main.o"
+".\obj\stm32f10x_it.o"
+".\obj\sys_function.o"
+".\obj\core_cm3.o"
+".\obj\system_stm32f10x.o"
+".\obj\startup_stm32f10x_hd.o"
+".\obj\misc.o"
+".\obj\stm32f10x_gpio.o"
+".\obj\stm32f10x_rcc.o"
+".\obj\stm32f10x_usart.o"
+".\obj\stm32f10x_pwr.o"
+".\obj\stm32f10x_tim.o"
+".\obj\usart.o"
+".\obj\usart2.o"
+".\obj\motorcontrol.o"
+--library_type=microlib --strict --scatter ".\OBJ\STM32F103.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\OBJ\STM32F103.map" -o .\OBJ\STM32F103.axf

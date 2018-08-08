@@ -1,0 +1,32 @@
+﻿  inv_mpu.c
+  inv_mpu_dmp_motion_driver.c
+  log_stm32.c
+  eMPL_outputs.c
+  data_builder.c
+  hal_outputs.c
+  message_layer.c
+  mlmath.c
+arm-eabi-gcc.exe : error : D:/Personal Ducumen/四轴/Program/STMF32407_port - test/DMP/driver/eMPL/inv_mpu.c: No such file or directory
+arm-eabi-gcc.exe : fatal error : no input files
+  compilation terminated.
+arm-eabi-gcc.exe : error : D:/Personal Ducumen/四轴/Program/STMF32407_port - test/DMP/driver/stm32L/log_stm32.c: No such file or directory
+arm-eabi-gcc.exe : error : D:/Personal Ducumen/四轴/Program/STMF32407_port - test/DMP/driver/eMPL/inv_mpu_dmp_motion_driver.c: No such file or directory
+arm-eabi-gcc.exe : fatal error : no input files
+arm-eabi-gcc.exe : fatal error : no input files
+  compilation terminated.
+  compilation terminated.
+arm-eabi-gcc.exe : error : D:/Personal Ducumen/四轴/Program/STMF32407_port - test/DMP/eMPL-hal/eMPL_outputs.c: No such file or directory
+arm-eabi-gcc.exe : fatal error : no input files
+  compilation terminated.
+arm-eabi-gcc.exe : error : D:/Personal Ducumen/四轴/Program/STMF32407_port - test/DMP/mllite/data_builder.c: No such file or directory
+arm-eabi-gcc.exe : fatal error : no input files
+  compilation terminated.
+arm-eabi-gcc.exe : error : D:/Personal Ducumen/四轴/Program/STMF32407_port - test/DMP/mllite/hal_outputs.c: No such file or directory
+arm-eabi-gcc.exe : fatal error : no input files
+  compilation terminated.
+arm-eabi-gcc.exe : error : D:/Personal Ducumen/四轴/Program/STMF32407_port - test/DMP/mllite/message_layer.c: No such file or directory
+arm-eabi-gcc.exe : fatal error : no input files
+  compilation terminated.
+arm-eabi-gcc.exe : error : D:/Personal Ducumen/四轴/Program/STMF32407_port - test/DMP/mllite/mlmath.c: No such file or directory
+arm-eabi-gcc.exe : fatal error : no input files
+  compilation terminated.

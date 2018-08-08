@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source files">
+      <UniqueIdentifier>{195be75f-bd1d-40c7-8fec-70a68357c5b1}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header files">
+      <UniqueIdentifier>{c76ec41d-6aed-4ba5-b0ab-bf0b082e98ee}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource files">
+      <UniqueIdentifier>{4d8d9615-e23b-4213-a206-041cf36bdcff}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Source files\USER">
+      <UniqueIdentifier>{000be96b-8f1e-4c4c-85f9-21f7ef9f5773}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\CORE">
+      <UniqueIdentifier>{4c43e4da-b9f4-48ee-a2c2-c763f4be21df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\FWLIB">
+      <UniqueIdentifier>{17fac1a6-e57f-4e5f-b11e-aa3c1dab1a8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\HARDWARE">
+      <UniqueIdentifier>{e773772a-17a6-4b83-8109-4c4ab9ba5c21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\Device-specific files">
+      <UniqueIdentifier>{33697692-44cb-46c6-9fcf-a3a716e1d87a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\USER">
+      <UniqueIdentifier>{46733867-6077-42b3-ae73-94feb32f3830}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\CORE">
+      <UniqueIdentifier>{024836e9-0a7d-4a0d-afaa-154a713bcee4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\FWLIB">
+      <UniqueIdentifier>{3ec1ab4a-fa31-4835-ad78-bf0fd8f13f0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\HARDWARE">
+      <UniqueIdentifier>{56c9a17b-0d2e-4b11-b575-760a98472e43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\Device-specific files">
+      <UniqueIdentifier>{e8016ef2-f499-4aac-98b6-8b865bc20706}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VisualGDB settings">
+      <UniqueIdentifier>{e1318bb7-e2ea-4d5f-8589-c50c9091e6e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\DMP">
+      <UniqueIdentifier>{045f315c-0d43-48ba-9fec-4d0ab9355c5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\DMP">
+      <UniqueIdentifier>{5341b9fd-610b-4e30-8ce7-6a1fff3b8759}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\USER\stm32f4xx_it.c">
+      <Filter>Source files\USER</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\USER\system_stm32f4xx.c">
+      <Filter>Source files\USER</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\USER\main.c">
+      <Filter>Source files\USER</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\FWLIB\src\stm32f4xx_gpio.c">
+      <Filter>Source files\FWLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\FWLIB\src\stm32f4xx_rcc.c">
+      <Filter>Source files\FWLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\FWLIB\src\stm32f4xx_usart.c">
+      <Filter>Source files\FWLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\FWLIB\src\stm32f4xx_i2c.c">
+      <Filter>Source files\FWLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\FWLIB\src\misc.c">
+      <Filter>Source files\FWLIB</Filter>
+    </ClCompile>
+    <None Include="stm32.props">
+      <Filter>Source files\Device-specific files</Filter>
+    </None>
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\StartupFiles\startup_stm32f407xx.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <None Include="Flight Control-Debug.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="Flight Control-Release.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="stm32.xml">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <ClCompile Include="..\..\..\Hardware\Usart.c">
+      <Filter>Source files\HARDWARE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\USER\sys_function.c">
+      <Filter>Source files\USER</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Hardware\bmp280_driver.c">
+      <Filter>Source files\HARDWARE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Hardware\mpu9250_driver.c">
+      <Filter>Source files\HARDWARE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\FWLIB\src\stm32f4xx_tim.c">
+      <Filter>Source files\FWLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DMP\driver\eMPL\inv_mpu.c">
+      <Filter>Source files\DMP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DMP\driver\eMPL\inv_mpu_dmp_motion_driver.c">
+      <Filter>Source files\DMP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DMP\driver\stm32L\log_stm32.c">
+      <Filter>Source files\DMP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DMP\eMPL-hal\eMPL_outputs.c">
+      <Filter>Source files\DMP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DMP\mllite\data_builder.c">
+      <Filter>Source files\DMP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DMP\mllite\hal_outputs.c">
+      <Filter>Source files\DMP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DMP\mllite\message_layer.c">
+      <Filter>Source files\DMP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DMP\mllite\ml_math_func.c">
+      <Filter>Source files\DMP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DMP\mllite\mlmath.c">
+      <Filter>Source files\DMP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DMP\mllite\mpl.c">
+      <Filter>Source files\DMP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DMP\mllite\results_holder.c">
+      <Filter>Source files\DMP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DMP\mllite\start_manager.c">
+      <Filter>Source files\DMP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DMP\mllite\storage_manager.c">
+      <Filter>Source files\DMP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\FWLIB\src\stm32f4xx_exti.c">
+      <Filter>Source files\FWLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\FWLIB\src\stm32f4xx_syscfg.c">
+      <Filter>Source files\FWLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Hardware\bmp280.c">
+      <Filter>Source files\HARDWARE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Hardware\mpu9250.c">
+      <Filter>Source files\HARDWARE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\USER\pid.c">
+      <Filter>Source files\USER</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Hardware\adc.c">
+      <Filter>Source files\USER</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\FWLIB\src\stm32f4xx_adc.c">
+      <Filter>Source files\FWLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Hardware\usart2.c">
+      <Filter>Source files\HARDWARE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\FWLIB\src\stm32f4xx_spi.c">
+      <Filter>Source files\FWLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Hardware\nrf2401.c">
+      <Filter>Source files\HARDWARE</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\USER\sys_config.h">
+      <Filter>Source files\USER</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\..\DMP\mpl\libmpllib.lib">
+      <Filter>Source files\DMP</Filter>
+    </Library>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,363 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¶ÃVision V5.23.0.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: l l, l, LIC=6XJJJ-UP82G-TJZ6H-WKZFW-6MJ3N-0F9AG
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.23
+Toolchain Path:  D:\Work Program\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.6
+Assembler:       Armasm.exe V6.6
+Linker/Locator:  ArmLink.exe V6.6
+Library Manager: ArmAr.exe V6.6
+Hex Converter:   FromElf.exe V6.6
+CPU DLL:         SARMCM3.DLL V5.23
+Dialog DLL:      DARMSTM.DLL V1.68.0.0
+Target DLL:      UL2CM3.DLL V1.159.7.0
+Dialog DLL:      TARMSTM.DLL V1.66.0.0
+ 
+<h2>Project:</h2>
+D:\Personal Ducumen\Àƒ÷·\Program\STM32F103_port\Template.uvprojx
+Project File Date:  03/05/2018
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.6', folder: 'D:\Work Program\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Template'
+assembling startup_stm32f10x_hd.s...
+compiling core_cm3.c...
+USER/sys_function.c(1): warning: In file included from...
+./USER/sys_function.h(4): warning: non-portable path to file '"Public.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "public.h"
+         ^~~~~~~~~~
+         "Public.h"
+USER/sys_function.c(1): warning: In file included from...
+./USER/sys_function.h(4): warning: In file included from...
+./USER/public.h(4): warning: In file included from...
+./CORE\stm32f10x.h(478): warning: In file included from...
+./CORE/core_cm3.h(1468): error: unknown type name '__INLINE'
+static __INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+       ^
+./CORE/core_cm3.h(1468): error: expected identifier or '('
+static __INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+                ^
+./CORE/core_cm3.h(1489): error: unknown type name '__INLINE'
+static __INLINE uint32_t NVIC_GetPriorityGrouping(void)
+       ^
+./CORE/core_cm3.h(1489): error: expected ';' after top level declarator
+static __INLINE uint32_t NVIC_GetPriorityGrouping(void)
+                        ^
+                        ;
+./CORE/core_cm3.h(1756): error: unknown type name '__INLINE'
+static __INLINE uint32_t ITM_SendChar (uint32_t ch)
+       ^
+./CORE/core_cm3.h(1756): error: expected ';' after top level declarator
+static __INLINE uint32_t ITM_SendChar (uint32_t ch)
+                        ^
+                        ;
+USER/sys_function.c(3): error: '#pragma import' is an ARM Compiler 5 extension, and is not supported by ARM Compiler 6 [-Warmcc-pragma-import]
+#pragma import(__use_no_semihosting)             
+        ^
+USER/sys_function.c(5): error: redefinition of '__FILE'
+struct __FILE 
+       ^
+D:\Work Program\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(119): note: previous definition is here
+struct __FILE {
+       ^
+USER/sys_function.c(13): warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+_sys_exit(int x) 
+^
+USER/sys_function.c(15): warning: explicitly assigning value of variable of type 'int' to itself [-Wself-assign]
+        x = x; 
+        ~ ^ ~
+USER/sys_function.c(13): warning: no previous prototype for function '_sys_exit' [-Wmissing-prototypes]
+_sys_exit(int x) 
+^
+USER/sys_function.c(18): warning: unused parameter 'f' [-Wunused-parameter]
+int fputc(int ch, FILE *f)
+                        ^
+USER/sys_function.c(36): warning: implicit declaration of function 'SysTick_Config' is invalid in C99 [-Wimplicit-function-declaration]
+        while(SysTick_Config(Frequence / 1000));        
+              ^
+6 warnings and 8 errors generated.
+compiling sys_function.c...
+CORE/system_stm32f10x.c(65): warning: In file included from...
+./CORE/stm32f10x.h(478): warning: In file included from...
+./CORE/core_cm3.h(1468): error: unknown type name '__INLINE'
+static __INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+       ^
+./CORE/core_cm3.h(1468): error: expected identifier or '('
+static __INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+                ^
+./CORE/core_cm3.h(1489): error: unknown type name '__INLINE'
+static __INLINE uint32_t NVIC_GetPriorityGrouping(void)
+       ^
+./CORE/core_cm3.h(1489): error: expected ';' after top level declarator
+static __INLINE uint32_t NVIC_GetPriorityGrouping(void)
+                        ^
+                        ;
+./CORE/core_cm3.h(1756): error: unknown type name '__INLINE'
+static __INLINE uint32_t ITM_SendChar (uint32_t ch)
+       ^
+./CORE/core_cm3.h(1756): error: expected ';' after top level declarator
+static __INLINE uint32_t ITM_SendChar (uint32_t ch)
+                        ^
+                        ;
+CORE/system_stm32f10x.c(162): warning: no previous extern declaration for non-static variable 'SystemCoreClock' [-Wmissing-variable-declarations]
+  uint32_t SystemCoreClock         = SYSCLK_FREQ_72MHz;        /*!< System Clock Frequency (Core Clock) */
+           ^
+CORE/system_stm32f10x.c(167): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+2 warnings and 6 errors generated.
+compiling system_stm32f10x.c...
+USER/main.c(1): warning: non-portable path to file '"Public.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "public.h"
+         ^~~~~~~~~~
+         "Public.h"
+USER/main.c(1): warning: In file included from...
+./USER/public.h(4): warning: In file included from...
+./CORE\stm32f10x.h(478): warning: In file included from...
+./CORE/core_cm3.h(1468): error: unknown type name '__INLINE'
+static __INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+       ^
+./CORE/core_cm3.h(1468): error: expected identifier or '('
+static __INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+                ^
+./CORE/core_cm3.h(1489): error: unknown type name '__INLINE'
+static __INLINE uint32_t NVIC_GetPriorityGrouping(void)
+       ^
+./CORE/core_cm3.h(1489): error: expected ';' after top level declarator
+static __INLINE uint32_t NVIC_GetPriorityGrouping(void)
+                        ^
+                        ;
+./CORE/core_cm3.h(1756): error: unknown type name '__INLINE'
+static __INLINE uint32_t ITM_SendChar (uint32_t ch)
+       ^
+./CORE/core_cm3.h(1756): error: expected ';' after top level declarator
+static __INLINE uint32_t ITM_SendChar (uint32_t ch)
+                        ^
+                        ;
+2 warnings and 6 errors generated.
+./USER/public.h(6): warning: In file included from...
+./USER/sys_function.h(4): warning: non-portable path to file '"Public.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "public.h"
+         ^~~~~~~~~~
+         "Public.h"
+compiling main.c...
+USER/stm32f10x_it.c(25): warning: In file included from...
+./USER/stm32f10x_it.h(31): warning: In file included from...
+./CORE\stm32f10x.h(478): warning: In file included from...
+./CORE/core_cm3.h(1468): error: unknown type name '__INLINE'
+static __INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+       ^
+./CORE/core_cm3.h(1468): error: expected identifier or '('
+static __INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+                ^
+./CORE/core_cm3.h(1489): error: unknown type name '__INLINE'
+static __INLINE uint32_t NVIC_GetPriorityGrouping(void)
+       ^
+./CORE/core_cm3.h(1489): error: expected ';' after top level declarator
+static __INLINE uint32_t NVIC_GetPriorityGrouping(void)
+                        ^
+                        ;
+./CORE/core_cm3.h(1756): error: unknown type name '__INLINE'
+static __INLINE uint32_t ITM_SendChar (uint32_t ch)
+       ^
+./CORE/core_cm3.h(1756): error: expected ';' after top level declarator
+static __INLINE uint32_t ITM_SendChar (uint32_t ch)
+                        ^
+                        ;
+6 errors generated.
+compiling stm32f10x_it.c...
+FWLIB/src/misc.c(24): warning: In file included from...
+./FWLIB/inc\misc.h(32): warning: In file included from...
+./CORE\stm32f10x.h(478): warning: In file included from...
+./CORE/core_cm3.h(1468): error: unknown type name '__INLINE'
+static __INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+       ^
+./CORE/core_cm3.h(1468): error: expected identifier or '('
+static __INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+                ^
+./CORE/core_cm3.h(1489): error: unknown type name '__INLINE'
+static __INLINE uint32_t NVIC_GetPriorityGrouping(void)
+       ^
+./CORE/core_cm3.h(1489): error: expected ';' after top level declarator
+static __INLINE uint32_t NVIC_GetPriorityGrouping(void)
+                        ^
+                        ;
+./CORE/core_cm3.h(1756): error: unknown type name '__INLINE'
+static __INLINE uint32_t ITM_SendChar (uint32_t ch)
+       ^
+./CORE/core_cm3.h(1756): error: expected ';' after top level declarator
+static __INLINE uint32_t ITM_SendChar (uint32_t ch)
+                        ^
+                        ;
+1 warning and 6 errors generated.
+mplicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wconversion]
+    NVIC->IP[NVIC_InitStruct->NVIC_IRQChannel] = tmppriority;
+                                               ~ ^~~~~~~~~~~
+compiling misc.c...
+FWLIB/src/stm32f10x_gpio.c(23): warning: In file included from...
+./FWLIB/inc\stm32f10x_gpio.h(32): warning: In file included from...
+./CORE\stm32f10x.h(478): warning: In file included from...
+./CORE/core_cm3.h(1468): error: unknown type name '__INLINE'
+static __INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+       ^
+./CORE/core_cm3.h(1468): error: expected identifier or '('
+static __INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+                ^
+./CORE/core_cm3.h(1489): error: unknown type name '__INLINE'
+static __INLINE uint32_t NVIC_GetPriorityGrouping(void)
+       ^
+./CORE/core_cm3.h(1489): error: expected ';' after top level declarator
+static __INLINE uint32_t NVIC_GetPriorityGrouping(void)
+                        ^
+                        ;
+./CORE/core_cm3.h(1756): error: unknown type name '__INLINE'
+static __INLINE uint32_t ITM_SendChar (uint32_t ch)
+       ^
+./CORE/core_cm3.h(1756): error: expected ';' after top level declarator
+static __INLINE uint32_t ITM_SendChar (uint32_t ch)
+                        ^
+                        ;
+6 errors generated.
+compiling stm32f10x_gpio.c...
+FWLIB/src/stm32f10x_rcc.c(23): warning: In file included from...
+./FWLIB/inc\stm32f10x_rcc.h(32): warning: In file included from...
+./CORE\stm32f10x.h(478): warning: In file included from...
+./CORE/core_cm3.h(1468): error: unknown type name '__INLINE'
+static __INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+       ^
+./CORE/core_cm3.h(1468): error: expected identifier or '('
+static __INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+                ^
+./CORE/core_cm3.h(1489): error: unknown type name '__INLINE'
+static __INLINE uint32_t NVIC_GetPriorityGrouping(void)
+       ^
+./CORE/core_cm3.h(1489): error: expected ';' after top level declarator
+static __INLINE uint32_t NVIC_GetPriorityGrouping(void)
+                        ^
+                        ;
+./CORE/core_cm3.h(1756): error: unknown type name '__INLINE'
+static __INLINE uint32_t ITM_SendChar (uint32_t ch)
+       ^
+./CORE/core_cm3.h(1756): error: expected ';' after top level declarator
+static __INLINE uint32_t ITM_SendChar (uint32_t ch)
+                        ^
+                        ;
+6 errors generated.
+compiling stm32f10x_rcc.c...
+FWLIB/src/stm32f10x_usart.c(23): warning: In file included from...
+./FWLIB/inc\stm32f10x_usart.h(32): warning: In file included from...
+./CORE\stm32f10x.h(478): warning: In file included from...
+./CORE/core_cm3.h(1468): error: unknown type name '__INLINE'
+static __INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+       ^
+./CORE/core_cm3.h(1468): error: expected identifier or '('
+static __INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+                ^
+./CORE/core_cm3.h(1489): error: unknown type name '__INLINE'
+static __INLINE uint32_t NVIC_GetPriorityGrouping(void)
+       ^
+./CORE/core_cm3.h(1489): error: expected ';' after top level declarator
+static __INLINE uint32_t NVIC_GetPriorityGrouping(void)
+                        ^
+                        ;
+./CORE/core_cm3.h(1756): error: unknown type name '__INLINE'
+static __INLINE uint32_t ITM_SendChar (uint32_t ch)
+       ^
+./CORE/core_cm3.h(1756): error: expected ';' after top level declarator
+static __INLINE uint32_t ITM_SendChar (uint32_t ch)
+                        ^
+                        ;
+FWLIB/src/stm32f10x_usart.c(1043): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wconversion]
+  itmask = ((uint16_t)0x01 << (uint16_t)bitpos);
+         ~  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+1 warning and 6 errors generated.
+compiling stm32f10x_usart.c...
+HW/Usart.c(1): warning: non-portable path to file '"Usart.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "usart.h"
+         ^~~~~~~~~
+         "Usart.h"
+HW/Usart.c(1): warning: In file included from...
+HW/usart.h(12): warning: non-portable path to file '"Public.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "public.h"
+         ^~~~~~~~~~
+         "Public.h"
+HW/Usart.c(1): warning: In file included from...
+HW/usart.h(12): warning: In file included from...
+./USER\public.h(4): warning: In file included from...
+./CORE\stm32f10x.h(478): warning: In file included from...
+./CORE/core_cm3.h(1468): error: unknown type name '__INLINE'
+static __INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+       ^
+./CORE/core_cm3.h(1468): error: expected identifier or '('
+static __INLINE void NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
+                ^
+./CORE/core_cm3.h(1489): error: unknown type name '__INLINE'
+static __INLINE uint32_t NVIC_GetPriorityGrouping(void)
+       ^
+./CORE/core_cm3.h(1489): error: expected ';' after top level declarator
+static __INLINE uint32_t NVIC_GetPriorityGrouping(void)
+                        ^
+                        ;
+./CORE/core_cm3.h(1756): error: unknown type name '__INLINE'
+static __INLINE uint32_t ITM_SendChar (uint32_t ch)
+       ^
+./CORE/core_cm3.h(1756): error: expected ';' after top level declarator
+static __INLINE uint32_t ITM_SendChar (uint32_t ch)
+                        ^
+                        ;
+HW/Usart.c(1): warning: In file included from...
+HW/usart.h(12): warning: In file included from...
+./USER/public.h(6): warning: In file included from...
+./USER/sys_function.h(4): warning: non-portable path to file '"Public.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "public.h"
+         ^~~~~~~~~~
+         "Public.h"
+HW/Usart.c(5): warning: no previous extern declaration for non-static variable 'USART1_Init' [-Wmissing-variable-declarations]
+const USART_INIT_T USART1_Init =        
+                   ^
+HW/Usart.c(1): warning: In file included from...
+HW/usart.h(12): warning: In file included from...
+./USER/public.h(4): warning: In file included from...
+./CORE\stm32f10x.h(8297): warning: In file included from...
+./USER\stm32f10x_conf.h(48): warning: In file included from...
+./FWLIB/inc\stm32f10x_usart.h(50): warning: padding size of 'USART_InitTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+HW/Usart.c(1): warning: In file included from...
+HW/usart.h(28): warning: padding struct 'USART_INIT_T' with 1 byte to align 'USART_BaudRate' [-Wpadded]
+        uint32_t USART_BaudRate;
+                 ^
+HW/usart.h(17): warning: padding size of 'USART_INIT_T' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct 
+        ^
+HW/Usart.c(70): warning: cast from 'const USART_INIT_T *' to 'USART_INIT_T *' drops const qualifier [-Wcast-qual]
+        Print_Usart.Usartx_Init = (USART_INIT_T *)&USART1_Init;
+                                                  ^
+HW/Usart.c(71): warning: implicitly declaring library function 'malloc' with type 'void *(unsigned int)' [-Wimplicit-function-declaration]
+        Print_Usart.RX_DataBuff = malloc(PRINTF_USART_RX_SIZE * sizeof(uint8_t));
+                                  ^
+HW/Usart.c(71): note: include the header <stdlib.h> or explicitly provide a declaration for 'malloc'
+HW/Usart.c(68): warning: no previous prototype for function 'Usart_Initialization' [-Wmissing-prototypes]
+void Usart_Initialization(void)         //All Usart initialization
+     ^
+10 warnings and 6 errors generated.
+compiling Usart.c...
+".\OBJ\uCOSIII-Template.axf" - 56 Error(s), 21 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Template
+  D:\Work Program\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:06
+</pre>
+</body>
+</html>

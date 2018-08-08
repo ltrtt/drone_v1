@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|VisualGDB">
+      <Configuration>Debug</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|VisualGDB">
+      <Configuration>Release</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>14.0</VCProjectVersion>
+    <ProjectGuid>{F7346D03-2ADB-4007-A00A-999D13EDBA42}</ProjectGuid>
+    <BSP_ID>com.sysprogs.arm.stm32</BSP_ID>
+    <BSP_VERSION>4.6R3</BSP_VERSION>
+    <InPlaceBSPSubdir />
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <MCUPropertyListFile>$(ProjectDir)stm32.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <MCUPropertyListFile>$(ProjectDir)stm32.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <GNUConfigurationType>Debug</GNUConfigurationType>
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>7.2.0/8.0.1/r3</ToolchainVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>7.2.0/8.0.1/r3</ToolchainVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\USER;..\..\..\FWLIB\inc;..\..\..\CORE;..\..\..\Hardware;..\..\..\DMP\driver\eMPL;..\..\..\DMP\driver\include;..\..\..\DMP\mpl;..\..\..\DMP\mllite;..\..\..\DMP\eMPL-hal;..\..\..\DMP\driver\stm32L;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG=1;RELEASE=1;flash_layout;STM32F40_41xxx;USE_STDPERIPH_DRIVER;MPL_LOG_NDEBUG=1;EMPL;MPU9250;EMPL_TARGET_STM32F4;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions />
+      <CLanguageStandard />
+      <CPPLanguageStandard />
+    </ClCompile>
+    <Link>
+      <LibrarySearchDirectories>%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <AdditionalLinkerInputs>%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <AdditionalOptions />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\USER;..\..\..\FWLIB\inc;..\..\..\CORE;..\..\..\Hardware;..\..\..\DMP\driver\eMPL;..\..\..\DMP\driver\include;..\..\..\DMP\mpl;..\..\..\DMP\mllite;..\..\..\DMP\eMPL-hal;..\..\..\DMP\driver\stm32L;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__CC_ARM;DEBUG=1;flash_layout;STM32F40_41xxx;USE_STDPERIPH_DRIVER;MPL_LOG_NDEBUG=1;EMPL;MPU9250;EMPL_TARGET_STM32F4;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions />
+      <CLanguageStandard />
+      <CPPLanguageStandard />
+    </ClCompile>
+    <Link>
+      <LibrarySearchDirectories>%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <AdditionalLinkerInputs>%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <AdditionalOptions />
+      <LinkerScript />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\USER\sys_config.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\DMP\driver\eMPL\inv_mpu.c" />
+    <ClCompile Include="..\..\..\DMP\driver\eMPL\inv_mpu_dmp_motion_driver.c" />
+    <ClCompile Include="..\..\..\DMP\driver\stm32L\log_stm32.c" />
+    <ClCompile Include="..\..\..\DMP\eMPL-hal\eMPL_outputs.c" />
+    <ClCompile Include="..\..\..\DMP\mllite\data_builder.c" />
+    <ClCompile Include="..\..\..\DMP\mllite\hal_outputs.c" />
+    <ClCompile Include="..\..\..\DMP\mllite\message_layer.c" />
+    <ClCompile Include="..\..\..\DMP\mllite\mlmath.c" />
+    <ClCompile Include="..\..\..\DMP\mllite\ml_math_func.c" />
+    <ClCompile Include="..\..\..\DMP\mllite\mpl.c" />
+    <ClCompile Include="..\..\..\DMP\mllite\results_holder.c" />
+    <ClCompile Include="..\..\..\DMP\mllite\start_manager.c" />
+    <ClCompile Include="..\..\..\DMP\mllite\storage_manager.c" />
+    <ClCompile Include="..\..\..\FWLIB\src\stm32f4xx_adc.c" />
+    <ClCompile Include="..\..\..\FWLIB\src\stm32f4xx_exti.c" />
+    <ClCompile Include="..\..\..\FWLIB\src\stm32f4xx_spi.c" />
+    <ClCompile Include="..\..\..\FWLIB\src\stm32f4xx_syscfg.c" />
+    <ClCompile Include="..\..\..\FWLIB\src\stm32f4xx_tim.c" />
+    <ClCompile Include="..\..\..\Hardware\adc.c" />
+    <ClCompile Include="..\..\..\Hardware\bmp280.c" />
+    <ClCompile Include="..\..\..\Hardware\bmp280_driver.c" />
+    <ClCompile Include="..\..\..\Hardware\mpu9250.c" />
+    <ClCompile Include="..\..\..\Hardware\mpu9250_driver.c" />
+    <ClCompile Include="..\..\..\Hardware\nrf2401.c" />
+    <ClCompile Include="..\..\..\Hardware\Usart.c" />
+    <ClCompile Include="..\..\..\Hardware\usart2.c" />
+    <ClCompile Include="..\..\..\USER\pid.c" />
+    <ClCompile Include="..\..\..\USER\stm32f4xx_it.c" />
+    <ClCompile Include="..\..\..\USER\system_stm32f4xx.c" />
+    <ClCompile Include="..\..\..\USER\main.c" />
+    <ClCompile Include="..\..\..\FWLIB\src\stm32f4xx_gpio.c" />
+    <ClCompile Include="..\..\..\FWLIB\src\stm32f4xx_rcc.c" />
+    <ClCompile Include="..\..\..\FWLIB\src\stm32f4xx_usart.c" />
+    <ClCompile Include="..\..\..\FWLIB\src\stm32f4xx_i2c.c" />
+    <ClCompile Include="..\..\..\FWLIB\src\misc.c" />
+    <ClCompile Include="..\..\..\USER\sys_function.c" />
+    <None Include="stm32.props" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\StartupFiles\startup_stm32f407xx.c" />
+    <None Include="Flight Control-Debug.vgdbsettings" />
+    <None Include="Flight Control-Release.vgdbsettings" />
+    <None Include="stm32.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\..\DMP\mpl\libmpllib.lib" />
+  </ItemGroup>
+</Project>
